@@ -2,6 +2,7 @@ import { useMemo } from 'react';
 import Image from 'next/image';
 import { FacebookIcon, InstagramIcon, LinkedinIcon, YoutubeIcon } from './social';
 import Link from 'next/link';
+import Paragraph from './Paragraph';
 
 export default function Footer() {
     const socials = useMemo(() => ([
@@ -20,31 +21,34 @@ export default function Footer() {
                     <div className="col-span-1 sm:col-span-2 lg:col-span-1">
                         
                         <div className="flex items-center gap-2 mb-4">
-                            <Image
-                                src="/svg/logo/logo-light.svg"
-                                alt="Langphy Logo"
-                                width={334.87}
-                                height={77.87}
-                                loading="eager"
-                                preload
-                                // priority
-                            />
+                            <a href="/">
+                                <Image
+                                    src="/svg/logo/logo-light.svg"
+                                    alt="Langphy Logo"
+                                    width={334.87}
+                                    height={77.87}
+                                    loading="eager"
+                                    preload
+                                    // priority
+                                />
+                            </a>
                         </div>
 
-                        <p className="text-gray-400 text-sm leading-relaxed max-w-xs">
-                            A structured German language learning app designed for real-life communication.
-                        </p>
+                        <Paragraph
+                            className="leading-relaxed max-w-xs text-white"
+                            content="A structured German language learning app designed for real-life communication."
+                        />
                     </div>
 
                     {/* Links */}
                     <div>
-                        <h4 className="font-semibold text-white mb-4" style={{ fontFamily: "Sora, sans-serif" }}>
+                        <h4 className="font-semibold text-white mb-4">
                             Links
                         </h4>
                         <ul className="space-y-2.5">
                             {["Terms and Conditions", "Privacy Policy", "About us", "Acknowledgment"].map((item) => (
                             <li key={item}>
-                                <Link href="#" className="text-gray-400 text-sm hover:text-white transition-colors">
+                                <Link href="#" className="text-white text-sm hover:text-white transition-colors">
                                     {item}
                                 </Link>
                             </li>
@@ -54,12 +58,12 @@ export default function Footer() {
 
                     {/* Contact */}
                     <div>
-                        <h4 className="font-semibold text-white mb-4" style={{ fontFamily: "Sora, sans-serif" }}>
+                        <h4 className="font-semibold text-white mb-4">
                             Contact
                         </h4>
 
                         <ul className="space-y-3">
-                            {/* <li className="flex items-center gap-2 text-gray-400 text-sm">
+                            {/* <li className="flex items-center gap-2 text-white text-sm">
                                 <svg className="w-4 h-4 shrink-0 text-[#3B9EE8]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path
                                         strokeLinecap="round"
@@ -70,7 +74,7 @@ export default function Footer() {
                                 </svg>
                                 +01 ## ## ## ##
                             </li> */}
-                            <li className="flex items-center gap-2 text-gray-400 text-sm">
+                            <li className="flex items-center gap-2 text-white text-sm">
                                 <svg className="w-4 h-4 shrink-0 text-[#3B9EE8]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path
                                         strokeLinecap="round"
@@ -81,7 +85,7 @@ export default function Footer() {
                                 </svg>
                                 support@langphy.com
                             </li>
-                            <li className="flex items-start gap-2 text-gray-400 text-sm">
+                            <li className="flex items-start gap-2 text-white text-sm">
                                 <svg className="w-4 h-4 shrink-0 mt-0.5 text-[#3B9EE8]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path
                                         strokeLinecap="round"
@@ -103,7 +107,7 @@ export default function Footer() {
 
                     {/* Download App */}
                     <div>
-                        <h4 className="font-semibold text-white mb-4" style={{ fontFamily: "Sora, sans-serif" }}>
+                        <h4 className="font-semibold text-white mb-4">
                             Download App
                         </h4>
                         <a
@@ -115,7 +119,7 @@ export default function Footer() {
                             </svg>
 
                             <div>
-                                <div className="text-[10px] text-gray-400">GET IT ON</div>
+                                <div className="text-[10px] text-white">GET IT ON</div>
                                 <div className="text-sm font-semibold leading-tight">Google Play</div>
                             </div>
                         </a>
@@ -123,15 +127,15 @@ export default function Footer() {
                 </div>
 
                 {/* Social & copyright */}
-                <div className="mt-12 pt-8 border-t border-gray-800 flex flex-col sm:flex-row items-center justify-between gap-4">
-                    <p className="text-gray-500 text-sm">Copyright © 2026 Langphy</p>
+                <div className="mt-12 pt-8 border-t border-[#19468F] flex flex-col sm:flex-row items-center justify-between gap-4">
+                    <Paragraph className="text-white" content="Copyright © 2026 Langphy" />
                     <div className="flex items-center gap-4">
                         {socials.map(({ name, icon }) => (
                             <a
                                 key={name}
                                 href="#"
                                 aria-label={name}
-                                className="w-8 h-8 rounded-full bg-gray-800 hover:bg-[#1A6BCC] flex items-center justify-center transition-colors"
+                                className="w-8 h-8 rounded-full bg-white hover:bg-[#EEF8FF] flex items-center justify-center transition-colors"
                             >
                                 {icon}
                             </a>
