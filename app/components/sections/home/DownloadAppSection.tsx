@@ -39,7 +39,7 @@ const DownloadAppSection = () => {
                         content="Langphy is now available. Take the first step toward learning German with clarity and confidence."
                     />
 
-                    <ActionButton title="Download on Google Playstore" href="#download" />
+                    <ActionButton title="Download on Google Playstore" href="#download" className='mt-4' />
                 
                 </div>
 

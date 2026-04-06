@@ -1,14 +1,12 @@
-import React from 'react'
-
-const Anchor = ({name, route, onClick}: {name: string, route: string, onClick?: () => void}) => (
+const Anchor = ({name, route, onClick, isActive=false}: {name: string, route: string, onClick?: () => void, isActive?: boolean}) => (
     <a
         href={route}
         onClick={onClick}
-        className="text-[#142C57] text-sm uppercase hover:underline"
+        className={`${ isActive ? "text-[#3FA1FF]" : "text-[#142C57]"} text-sm uppercase hover:underline`}
     >
         {name}
     </a>
 );
 
 
-export default Anchor
+export default Anchor;
