@@ -12,8 +12,8 @@ const BrandingSection = () => {
                 
                 <InfoTag info="OCEAN BRANDING" />
 
-                <SectionTitle className="text-left">
-                    A Calm, Guided Learning<br className="hidden sm:block" />Experience.
+                <SectionTitle className="lg:text-left">
+                    A Calm, Guided Learning Experience.
                 </SectionTitle>
                 
                 <Paragraph
@@ -32,7 +32,7 @@ const BrandingSection = () => {
                     width={489}
                     height={165}
                     loading="lazy"
-                    className="w-[280px] sm:w-[380px] md:w-[460px] lg:w-[520px] h-auto"
+                    // className="w-[280px] sm:w-[380px] md:w-[460px] lg:w-[520px] h-auto"
                 />
             </div>
         </SectionBlock>

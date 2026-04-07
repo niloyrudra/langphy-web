@@ -4,7 +4,6 @@ import Main from "../components/sections/Main";
 import OurApproachSection from "../components/sections/about/OurApproachSection";
 import BrandingSection from "../components/sections/about/BrandingSection";
 import OurTeamSection from "../components/sections/about/OurTeamSection";
-import MissionSection from "../components/sections/about/MissionSection";
 import HeroBanner from "../components/sections/HeroBanner";
 import TopSection from "../components/sections/about/TopSection";
 
@@ -32,7 +31,6 @@ const About = () => (
 
     {/* ── Our Team ─────────────────────────────────────────────────────── */}
     <OurTeamSection />
-
   </Main>
 );
 

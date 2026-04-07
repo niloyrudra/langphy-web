@@ -22,7 +22,7 @@ export default function HowItWorksSection() {
                 <InfoTag info="HOW LANGPHY WORKS" />
 
                 <SectionTitle>
-                    Short lessons, real practice, and clear<br className="hidden sm:block" />progress — all in one app
+                    Short lessons, real practice, and clear<br className="lg:hidden sm:flex" />progress — all in one app
                 </SectionTitle>
                     
                 {/* ── Mobile: vertical numbered list ── */}
@@ -33,8 +33,8 @@ export default function HowItWorksSection() {
                                 {n}
                             </span>
                             <div>
-                                <h3 className="font-semibold text-zinc-900 text-sm">{title}</h3>
-                                <p className="text-sm leading-6 text-zinc-600 mt-0.5">{desc}</p>
+                                <ContentTitle title={title} />
+                                <Paragraph className="mt-0.5" content={desc} />
                             </div>
                         </li>
                     ))}

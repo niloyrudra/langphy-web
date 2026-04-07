@@ -21,7 +21,7 @@ const OurApproachSection = () => {
                     width={480.71}
                     height={500}
                     loading="lazy"
-                    className="w-[260px] sm:w-[340px] md:w-[400px] lg:w-[460px] h-auto"
+                    // className="w-[260px] sm:w-[340px] md:w-[400px] lg:w-[460px] h-auto"
                 />
             </div>
     
@@ -30,7 +30,9 @@ const OurApproachSection = () => {
                 
                 <InfoTag info="OUR APPROACH" />
 
-                <SectionTitle className="text-left">From understanding to confident communication.</SectionTitle>
+                <SectionTitle className="lg:text-left">
+                    From Understanding to Confident Communication.
+                </SectionTitle>
 
                 <Paragraph
                     content="Langphy organizes German learning into 62 carefully designed categories, each covering essential topics used in everyday communication."
@@ -38,7 +40,7 @@ const OurApproachSection = () => {
 
                 <Paragraph content="We believe language learning should feel:" />
     
-                <ul className="flex flex-col gap-2 list-none w-full max-w-lg">
+                <ul className="flex flex-col gap-2 list-none w-full">
                     {bulletPoints.map((item) => (
                         <li key={item} className="flex flex-row gap-4 items-center">
                             <Image

@@ -5,10 +5,10 @@ import SectionTitle from '../../SectionTitle';
 
 const TopSection = () => (
     <SectionBlock id="about-and-mission-langphy" className="md:pb-14">
-        <div className="flex flex-col gap-4 items-center text-center md:items-start md:text-left order-1">
+        <div className="flex flex-col gap-4 items-center text-center order-1">
             <InfoTag info="ABOUT LANGPHY" />
 
-            <SectionTitle className="text-left">Learn German the Smart Way</SectionTitle>
+            <SectionTitle>Learn German the Smart Way</SectionTitle>
             
             <Paragraph
                 className="max-w-full"
@@ -20,10 +20,10 @@ const TopSection = () => (
             />
         </div>
 
-        <div className="flex flex-col gap-4 items-center text-center md:items-start md:text-left order-1">
+        <div className="flex flex-col gap-4 items-center text-center order-2">
             <InfoTag info="OUR MISSION" />
 
-            <SectionTitle className="text-left">
+            <SectionTitle>
                 Help you learn German with clarity and confidence.
             </SectionTitle>
             

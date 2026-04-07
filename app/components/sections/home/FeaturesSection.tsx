@@ -32,22 +32,27 @@ const FeaturesSection = () => {
         
             <Image
                 src="/svg/bg/features-bg.svg"
-                alt=""
+                alt="Langphy Features Background"
                 width={width || 1440}
                 height={(width || 1440) * 0.6}
                 loading="eager"
-                className="absolute top-0 left-0 right-0 w-full h-auto z-0 pointer-events-none"
+                className="hidden lg:flex absolute top-0 left-0 right-0 w-full h-auto z-0 pointer-events-none sm:hidden"
+            />
+            <Image
+                src="/svg/bg/features-bg-sm.svg"
+                alt="Langphy Features Background"
+                width={width || 1440}
+                height={1984}
+                loading="eager"
+                className="lg:hidden md:flex absolute inset-0 h-full object-cover z-0 pointer-events-none"
             />
         
             <div className="flex flex-col max-w-6xl w-full mx-auto items-center gap-6 z-10">
     
-                <InfoTag
-                    info="FEATURES"
-                    invert
-                />
+                <InfoTag info="FEATURES" invert />
 
                 <SectionTitle invert>
-                    Everything You Need to Learn German<br className="hidden sm:block" />in One App
+                    Everything You Need to Learn German<br className="lg:hidden sm:flex" />in One App
                 </SectionTitle>
     
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 w-full mt-10">

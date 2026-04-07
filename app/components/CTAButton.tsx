@@ -1,7 +1,8 @@
 import { twMerge } from "tailwind-merge";
 import clsx from "clsx";
+import Link from "next/link";
 
-const CTA = ({
+const CtaButton = ({
     title,
     href,
     className,
@@ -10,7 +11,7 @@ const CTA = ({
     href: string;
     className?: string;
 }) => (
-    <a
+    <Link
         href={href}
         className={twMerge(
             clsx(
@@ -20,7 +21,7 @@ const CTA = ({
         )}
     >
         {title}
-    </a>
+    </Link>
 );
 
-export default CTA;
+export default CtaButton;

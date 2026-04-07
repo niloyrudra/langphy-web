@@ -3,6 +3,7 @@ import InfoTag from '../../InfoTag';
 import SectionTitle from '../../SectionTitle';
 import Paragraph from '../../Paragraph';
 import SectionBlock from '../SectionBlock';
+import Link from 'next/link';
 
 const OurTeamSection = () => (
     <SectionBlock className="bg-[#F9FAFB]" id="our-team">
@@ -11,7 +12,7 @@ const OurTeamSection = () => (
             <InfoTag info="MEET THE TEAM" className="bg-white text-[#142C57]" />
 
             <SectionTitle>
-                A small team shaping a clearer, more<br className="hidden sm:block" />meaningful way to learn German
+                A Small Team Shaping a Clearer, More<br/>Meaningful Way to Learn German
             </SectionTitle>
 
             <Paragraph
@@ -29,7 +30,7 @@ const OurTeamSection = () => (
                         width={300}
                         height={349.06}
                         loading="lazy"
-                        className="w-[260px] sm:w-[340px] md:w-[400px] lg:w-[460px] h-auto"
+                        // className="w-[260px] sm:w-[340px] md:w-[400px] lg:w-[460px] h-auto"
                     />
                 </div>
         
@@ -42,7 +43,7 @@ const OurTeamSection = () => (
 
                     <Paragraph content="Responsible for building and scaling the platform, Niloy ensures Langphy is fast, reliable, and seamless. With expertise in modern web and mobile technologies, he brings the product to life with clean and efficient engineering." />
         
-                    <a
+                    <Link
                         href="https://www.linkedin.com/in/niloy-rudra-dev/"
                         target='_blank'
                         className="mt-3"
@@ -50,10 +51,10 @@ const OurTeamSection = () => (
                         <Image
                             src="/svg/social-icons/linkedin-icon.svg"
                             alt="Linkedin Icon"
-                            width={24}
-                            height={24}
+                            width={36}
+                            height={36}
                         />
-                    </a>
+                    </Link>
 
                 </div>
             </div>
@@ -73,7 +74,7 @@ const OurTeamSection = () => (
                         content="Kheya leads the vision and design of Langphy, focusing on creating a calm, structured learning experience. With a strong background in product design, she simplifies complex systems and designs products that feel intuitive and human."
                     />
 
-                    <a
+                    <Link
                         href="https://www.linkedin.com/in/kheya-nandi/"
                         target="_blank"
                         className="mt-3"
@@ -81,10 +82,10 @@ const OurTeamSection = () => (
                         <Image
                             src="/svg/social-icons/linkedin-icon.svg"
                             alt="Linkedin Icon"
-                            width={24}
-                            height={24}
+                            width={36}
+                            height={36}
                         />
-                    </a>
+                    </Link>
                 </div>
     
                 {/* Blob illustration */}
@@ -95,7 +96,7 @@ const OurTeamSection = () => (
                         width={365}
                         height={399.69}
                         loading="lazy"
-                        className="w-[280px] sm:w-[380px] md:w-[460px] lg:w-[520px] h-auto"
+                        // className="w-[280px] sm:w-[380px] md:w-[460px] lg:w-[520px] h-auto"
                     />
                 </div>
             </div>
