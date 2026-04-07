@@ -1,4 +1,5 @@
-import Link from "next/link";
+"use client";
+
 import Section from "../components/ligals/Section";
 import SubSection from "../components/ligals/SubSection";
 import Main from "../components/sections/Main";
@@ -155,11 +156,6 @@ const TermsAndConditionsPage = () => (
             <Paragraph content="Language learning outcomes depend on many individual factors. Langphy makes no representations regarding guaranteed fluency or proficiency outcomes." />
         </Section>
 
-        {/* Section 10 */}
-        <Section title="10. Disclaimer of Warranties">
-            <Paragraph content={`The application is provided "as is" without guarantees of availability, accuracy, or outcomes.`} />
-        </Section>
-
         {/* Section 11 */}
         <Section title="11. Limitation of Liability">
             <Paragraph content="To the fullest extent permitted by applicable law, Niloy Rudra and Kheya Nandi shall not be liable for any indirect, incidental, special, consequential, exemplary, or punitive damages arising from your use of or inability to use the application. This includes, without limitation, loss of learning progress, loss of streak data, or data loss due to device failure or synchronisation errors." />
@@ -172,7 +168,7 @@ const TermsAndConditionsPage = () => (
         </Section>
 
         {/* Section 13 */}
-        <Section title="12. Suspension and Termination">
+        <Section title="13. Suspension and Termination">
             <Paragraph content="We reserve the right to suspend or permanently terminate your access to the application at any time, with or without notice, for violation of these Terms, conduct harmful to other users or the application, or for security or technical reasons. Upon termination, your right to use the application ceases immediately. Provisions of these Terms that by their nature should survive termination — including intellectual property, disclaimers, limitation of liability, and governing law — will continue to apply." />
         </Section>
 

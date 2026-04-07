@@ -1,4 +1,5 @@
 import { ReactNode } from 'react'
+import BannerWave from './BannerWave';
 interface HeroBannerProps {
     title: string;
     children: ReactNode;
@@ -22,6 +23,9 @@ const HeroBanner = ({title, children, infoMessage}: HeroBannerProps) => (
                 {infoMessage}
             </p>
         </div>
+
+        {/* Wave bottom */}
+        {/* <BannerWave /> */}
     </section>
 );
 

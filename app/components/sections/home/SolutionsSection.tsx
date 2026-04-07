@@ -33,7 +33,7 @@ const SolutionsSection = () => {
                     
                     <InfoTag info="The Solutions" />
 
-                    <SectionTitle className="text-left">A Structured Way to Learn German"</SectionTitle>
+                    <SectionTitle className="lg:text-left">A Structured Way to Learn German"</SectionTitle>
 
                     <Paragraph
                         content="Langphy organises German learning into 62 carefully designed categories, each covering essential topics used in everyday communication."

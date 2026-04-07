@@ -13,7 +13,7 @@ const ProblemSection = () => {
                     
                     <InfoTag info="The Problem" />
 
-                    <SectionTitle className="text-left">
+                    <SectionTitle className="lg:text-left">
                         Learning German Shouldn't Feel<br className="hidden sm:block" />Overwhelming.
                     </SectionTitle>
                     

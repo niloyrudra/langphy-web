@@ -1,4 +1,5 @@
-import Link from "next/link";
+"use client";
+
 import Section from "../components/ligals/Section";
 import SubSection from "../components/ligals/SubSection";
 import Paragraph from "../components/Paragraph";
