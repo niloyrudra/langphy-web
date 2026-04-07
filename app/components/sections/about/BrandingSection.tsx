@@ -17,9 +17,11 @@ const BrandingSection = () => {
                 </SectionTitle>
                 
                 <Paragraph
+                    className='text-justify'
                     content="Langphy’s ocean-inspired design reflects a calm and structured approach to learning. Language learning has depth — but with the right guidance, it becomes clear and manageable."
                 />
                 <Paragraph
+                    className='text-justify'
                     content="Our dolphin mascot represents intelligence, communication, and friendly support — guiding you through your German learning journey."
                 />
             </div>

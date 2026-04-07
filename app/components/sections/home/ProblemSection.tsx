@@ -18,9 +18,11 @@ const ProblemSection = () => {
                     </SectionTitle>
                     
                     <Paragraph
+                        className='text-justify'
                         content="Many learners struggle with German because learning resources are scattered. Grammar notes, vocabulary lists, and practice exercises often live in different apps, books, and videos. Without a clear structure, it becomes difficult to know what to learn next or how to apply it in real conversations."
                     />
                     <Paragraph
+                        className='text-justify'
                         content="Langphy solves this problem by bringing structured lessons, explanations, and practice into one focused mobile experience."
                     />
                 </div>
@@ -33,7 +35,7 @@ const ProblemSection = () => {
                         width={600}
                         height={447}
                         loading="lazy"
-                        className="w-[280px] sm:w-[380px] md:w-[460px] lg:w-[520px] h-auto"
+                        // className="w-[280px] sm:w-[380px] md:w-[460px] lg:w-[520px] h-auto"
                     />
                 </div>
             </div>

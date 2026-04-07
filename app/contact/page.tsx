@@ -7,6 +7,10 @@ import Paragraph from "../components/Paragraph";
 import HeroBanner from "../components/sections/HeroBanner";
 import DownloadSection from "../components/sections/contact/DownloadSection";
 import ContactMethodsSection from "../components/sections/contact/ContactMethodsSection";
+import SectionTitle from "../components/SectionTitle";
+import ContentTitle from "../components/ContentTitle";
+import ActionButton from "../components/ActionButton";
+import SubmitButton from "../components/SubmitButton";
 
 type FormState = {
   name: string;
@@ -56,12 +60,24 @@ const ContactPage = () => {
     setForm((prev) => ({ ...prev, [e.target.name]: e.target.value }));
   };
 
-  const handleSubmit = async (e: React.MouseEvent<HTMLButtonElement>) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setStatus("sending");
-    // Replace with your actual form submission logic
-    await new Promise((r) => setTimeout(r, 1500));
-    setStatus("success");
+
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        body: JSON.stringify(form),
+      });
+
+      if (res.ok) {
+        setStatus("success");
+      } else {
+        setStatus("error");
+      }
+    } catch {
+      setStatus("error");
+    }
   };
 
   const faqs = useMemo(() => ([
@@ -105,29 +121,33 @@ const ContactPage = () => {
           {/* ── Contact Form ── */}
           <div className="w-full lg:w-[55%] flex flex-col gap-6">
             <div className="flex flex-col gap-2">
-              <h2 className="text-2xl sm:text-3xl font-semibold text-[#142C57] leading-snug">
+              <SectionTitle className="text-left">
                 Send us a message
-              </h2>
-              <p className="text-sm text-zinc-500 leading-6">
-                Fill in the form below and we'll get back to you as soon as possible.
-              </p>
+              </SectionTitle>
+              <Paragraph
+                content="Fill in the form below and we'll get back to you as soon as possible."
+              />
             </div>
 
             {status === "success" ? (
               <div className="flex flex-col items-center justify-center gap-4 bg-[#D5F6FF] rounded-2xl p-10 text-center min-h-[360px]">
+                
                 {/* Checkmark */}
                 <div className="flex w-16 h-16 rounded-full bg-[#1B7CF5] items-center justify-center">
                   <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" strokeWidth={2.5} viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
                   </svg>
                 </div>
-                <h3 className="text-xl font-semibold text-[#142C57]">Message sent!</h3>
-                <p className="text-sm text-zinc-600 max-w-xs">
-                  Thanks for reaching out. We'll get back to you within 24 hours.
-                </p>
+
+                <ContentTitle title="Message sent!" />
+
+                <Paragraph className="max-w-xs"
+                  content="Thanks for reaching out. We'll get back to you within 24 hours."
+                />
+                
                 <button
                   onClick={() => { setStatus("idle"); setForm({ name: "", email: "", subject: "", message: "" }); }}
-                  className="mt-2 text-sm font-semibold text-[#1B7CF5] underline underline-offset-2"
+                  className="mt-2 cursor-pointer text-sm font-semibold text-[#1B7CF5] underline underline-offset-2"
                 >
                   Send another message
                 </button>
@@ -209,7 +229,7 @@ const ContactPage = () => {
                 </div>
 
                 {/* Submit */}
-                <button
+                <SubmitButton
                   onClick={handleSubmit}
                   disabled={status === "sending" || !form.name || !form.email || !form.message}
                   className="mt-2 w-full sm:w-auto sm:self-start inline-flex items-center justify-center gap-2 rounded-full bg-[#142C57] px-8 py-3 text-sm font-semibold text-white transition-all hover:bg-[#1B7CF5] disabled:opacity-50 disabled:cursor-not-allowed"
@@ -225,12 +245,12 @@ const ContactPage = () => {
                   ) : (
                     <>
                       Send Message
-                      <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
+                      {/* <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
-                      </svg>
+                      </svg> */}
                     </>
                   )}
-                </button>
+                </SubmitButton>
 
               </div>
             )}
@@ -242,15 +262,11 @@ const ContactPage = () => {
           {/* ── FAQ ── */}
           <div className="w-full lg:flex-1 flex flex-col gap-6">
             <div className="flex flex-col gap-2">
-              <h2 className="text-2xl sm:text-3xl font-semibold text-[#142C57] leading-snug">
-                Frequently asked
-              </h2>
-              <Paragraph content="Quick answers to the questions we get most often."
-              />
+              <SectionTitle className="text-left">Frequently asked</SectionTitle>
+              <Paragraph content="Quick answers to the questions we get most often."/>
             </div>
 
             <div className="flex flex-col gap-3">
-              
               {faqs.map(({ q, a }) => ( /* ── Accordion FAQ Item ─────────────────────────────────────────────────── */
                 <FaqItem key={q} question={q} answer={a} />
               ))}
@@ -264,7 +280,7 @@ const ContactPage = () => {
                 </svg>
               </div>
               <div>
-                <h4 className="font-semibold text-sm mb-1">Still have questions?</h4>
+                <ContentTitle className="mb-1" title="Still have questions?" invert />
                 <p className="text-xs text-white/80 leading-5">
                   Can't find what you're looking for? Write to us directly at{" "}
                   <a href="mailto:support@langphy.com" className="underline underline-offset-2 font-medium">

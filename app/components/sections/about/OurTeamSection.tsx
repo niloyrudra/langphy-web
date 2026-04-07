@@ -16,7 +16,7 @@ const OurTeamSection = () => (
             </SectionTitle>
 
             <Paragraph
-                className='max-w-4xl text-center mt-8'
+                className='max-w-lg text-justify mt-8'
                 content="We combine design, technology, and real user insight to build a learning experience that feels intuitive, supportive, and effective. Every detail is crafted with care to help learners move forward with confidence."
             />
                 
@@ -30,7 +30,7 @@ const OurTeamSection = () => (
                         width={300}
                         height={349.06}
                         loading="lazy"
-                        // className="w-[260px] sm:w-[340px] md:w-[400px] lg:w-[460px] h-auto"
+                        className="w-[260px] sm:w-[340px] md:w-[400px] lg:w-[460px] h-auto"
                     />
                 </div>
         
@@ -41,7 +41,10 @@ const OurTeamSection = () => (
 
                     <Paragraph className='text-[#142C57]' content="Founder & Full-Stack Developer" />
 
-                    <Paragraph content="Responsible for building and scaling the platform, Niloy ensures Langphy is fast, reliable, and seamless. With expertise in modern web and mobile technologies, he brings the product to life with clean and efficient engineering." />
+                    <Paragraph
+                        className='text-justify'
+                        content="Responsible for building and scaling the platform, Niloy ensures Langphy is fast, reliable, and seamless. With expertise in modern web and mobile technologies, he brings the product to life with clean and efficient engineering."
+                    />
         
                     <Link
                         href="https://www.linkedin.com/in/niloy-rudra-dev/"
@@ -64,13 +67,12 @@ const OurTeamSection = () => (
                 {/* Copy – shown first on mobile */}
                 <div className="flex flex-col gap-4 items-center text-center md:items-start md:text-left order-1">
                     
-                    <SectionTitle className="text-left">
-                        Kheya Nandi
-                    </SectionTitle>
+                    <SectionTitle className="text-left">Kheya Nandi</SectionTitle>
 
                     <Paragraph className='text-[#142C57]' content="Co-Founder & Product Designer" />
                     
                     <Paragraph
+                        className='text-justify'
                         content="Kheya leads the vision and design of Langphy, focusing on creating a calm, structured learning experience. With a strong background in product design, she simplifies complex systems and designs products that feel intuitive and human."
                     />
 
@@ -96,7 +98,7 @@ const OurTeamSection = () => (
                         width={365}
                         height={399.69}
                         loading="lazy"
-                        // className="w-[280px] sm:w-[380px] md:w-[460px] lg:w-[520px] h-auto"
+                        className="w-[280px] sm:w-[380px] md:w-[460px] lg:w-[520px] h-auto"
                     />
                 </div>
             </div>

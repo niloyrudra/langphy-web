@@ -22,7 +22,7 @@ export default function HowItWorksSection() {
                 <InfoTag info="HOW LANGPHY WORKS" />
 
                 <SectionTitle>
-                    Short lessons, real practice, and clear<br className="lg:hidden sm:flex" />progress — all in one app
+                    Short lessons, real practice, and<br className="lg:hidden sm:flex" /> clear progress — all in one app
                 </SectionTitle>
                     
                 {/* ── Mobile: vertical numbered list ── */}

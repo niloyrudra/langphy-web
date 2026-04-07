@@ -4,6 +4,7 @@ import Image from 'next/image';
 import InfoTag from '../../InfoTag';
 import SectionTitle from '../../SectionTitle';
 import Paragraph from '../../Paragraph';
+import UlTag from '../../UlTag';
 
 const SolutionsSection = () => {
     const bulletPoints = useMemo(() => ([
@@ -24,7 +25,7 @@ const SolutionsSection = () => {
                         width={500}
                         height={576}
                         loading="lazy"
-                        className="w-[260px] sm:w-[340px] md:w-[400px] lg:w-[460px] h-auto"
+                        // className="w-[260px] sm:w-[340px] md:w-[400px] lg:w-[460px] h-auto"
                     />
                 </div>
         
@@ -36,12 +37,13 @@ const SolutionsSection = () => {
                     <SectionTitle className="lg:text-left">A Structured Way to Learn German"</SectionTitle>
 
                     <Paragraph
+                        className='text-justify'
                         content="Langphy organises German learning into 62 carefully designed categories, each covering essential topics used in everyday communication."
                     />
 
                     <Paragraph content="Every lesson includes:" />
         
-                    <ul className="flex flex-col gap-2 list-none w-full max-w-lg">
+                    <UlTag>
                         {bulletPoints.map((item) => (
                             <li key={item} className="flex flex-row gap-4 items-center">
                                 <Image
@@ -54,9 +56,10 @@ const SolutionsSection = () => {
                                 <Paragraph className="font-semibold" content={item} />
                             </li>
                         ))}
-                    </ul>
+                    </UlTag>
         
                     <Paragraph
+                        className='text-justify'
                         content="Instead of jumping between different tools, learners can follow a structured path designed to build real confidence in German."
                     />
                 </div>

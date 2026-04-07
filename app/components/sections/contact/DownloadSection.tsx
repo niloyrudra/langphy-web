@@ -1,16 +1,19 @@
 import Image from "next/image";
+import SectionTitle from "../../SectionTitle";
+import Link from "next/link";
+import Paragraph from "../../Paragraph";
 const DownloadSection = () => {
     return (
         <section className="w-full px-4 py-16 bg-[#F9FAFB]">
             <div className="max-w-2xl mx-auto flex flex-col items-center text-center gap-5">
-                <h2 className="text-2xl sm:text-3xl font-semibold text-[#142C57] leading-snug">
-                    Ready to start learning?
-                </h2>
-                <p className="text-sm text-zinc-600 leading-7 max-w-md">
-                    Download Langphy on Android and begin your structured German learning journey today.
-                </p>
-                <a
-                    href="#download"
+                <SectionTitle>Ready to start learning?</SectionTitle>
+                <Paragraph
+                    className="text-sm leading-7 max-w-md"
+                    content="Download Langphy on Android and begin your structured German learning journey today."
+                />
+
+                <Link
+                    href="/#download"
                     className="inline-flex items-center"
                 >
                     <Image
@@ -26,7 +29,7 @@ const DownloadSection = () => {
                         <div className="text-[10px] text-zinc-400 uppercase tracking-widest">GET IT ON</div>
                         <div className="text-sm font-semibold text-white leading-tight">Google Play</div>
                     </div> */}
-                </a>
+                </Link>
             </div>
         </section>
     )

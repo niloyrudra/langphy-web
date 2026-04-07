@@ -1,14 +1,14 @@
-import { useState } from "react";
+import { useCallback, useState } from "react";
 import Paragraph from "../../Paragraph";
 
 const FaqItem = ({ question, answer }: { question: string; answer: string }) => {
-  const [open, setOpen] = useState(false);
-
+    const [open, setOpen] = useState(false);
+    const detailToggleHandler = useCallback(() => setOpen(!open), [open]);
     return (
         <div className="border border-zinc-100 rounded-xl overflow-hidden bg-white">
             <button
-                onClick={() => setOpen(!open)}
-                className="w-full flex items-center justify-between gap-4 px-5 py-4 text-left"
+                onClick={detailToggleHandler}
+                className="w-full cursor-pointer flex items-center justify-between gap-4 px-5 py-4 text-left"
             >
                 <span className="text-sm font-semibold text-[#142C57]">{question}</span>
                 <span

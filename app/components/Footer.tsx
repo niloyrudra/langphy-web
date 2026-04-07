@@ -1,14 +1,10 @@
-import { useMemo } from 'react';
-import Image from 'next/image';
-import { FacebookIcon, InstagramIcon, LinkedinIcon, YoutubeIcon } from './social';
-import Link from 'next/link';
-import Paragraph from './Paragraph';
+"use client";
 import FooterBottomSection from './footer/FooterSocialList';
-import LogoLight from './logo/LogoLight';
 import FooterLinksWidget from './footer/FooterLinksWidget';
 import FooterContactWidget from './footer/FooterContactWidget';
 import FooterDownloadWidget from './footer/FooterDownloadWidget';
 import FooterBrandWidget from './footer/FooterBrandWidget';
+import BackToTopButton from './footer/BackToTop';
 
 const Footer = () => (
     <footer className="w-full bg-[#142C57] text-white">
@@ -33,6 +29,9 @@ const Footer = () => (
             <FooterBottomSection />
 
         </div>
+
+        <BackToTopButton />
+
     </footer>
 );
 export default  Footer;

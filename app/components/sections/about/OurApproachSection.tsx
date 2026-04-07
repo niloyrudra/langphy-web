@@ -4,6 +4,7 @@ import InfoTag from '../../InfoTag';
 import SectionTitle from '../../SectionTitle';
 import Paragraph from '../../Paragraph';
 import SectionBlock from '../SectionBlock';
+import UlTag from '../../UlTag';
 
 const OurApproachSection = () => {
     const bulletPoints = useMemo(() => ([
@@ -21,7 +22,7 @@ const OurApproachSection = () => {
                     width={480.71}
                     height={500}
                     loading="lazy"
-                    // className="w-[260px] sm:w-[340px] md:w-[400px] lg:w-[460px] h-auto"
+                    className="w-[260px] sm:w-[340px] md:w-[400px] lg:w-[460px] h-auto"
                 />
             </div>
     
@@ -35,12 +36,13 @@ const OurApproachSection = () => {
                 </SectionTitle>
 
                 <Paragraph
+                    className='text-justify'
                     content="Langphy organizes German learning into 62 carefully designed categories, each covering essential topics used in everyday communication."
                 />
 
                 <Paragraph content="We believe language learning should feel:" />
     
-                <ul className="flex flex-col gap-2 list-none w-full">
+                <UlTag>
                     {bulletPoints.map((item) => (
                         <li key={item} className="flex flex-row gap-4 items-center">
                             <Image
@@ -53,9 +55,10 @@ const OurApproachSection = () => {
                             <Paragraph className="font-semibold" content={item} />
                         </li>
                     ))}
-                </ul>
+                </UlTag>
     
                 <Paragraph
+                    className='text-justify'
                     content="That’s why Langphy focuses on combining explanation, structure, and practice into one seamless experience."
                 />
             </div>

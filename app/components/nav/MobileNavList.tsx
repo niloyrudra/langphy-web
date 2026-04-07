@@ -15,6 +15,4 @@ const MobileNavList = ({onClick}: {onClick: () => void}) => (
         />
     </div>
 );
-
-
 export default MobileNavList;

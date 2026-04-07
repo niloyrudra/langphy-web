@@ -14,7 +14,7 @@ const About = () => (
       title="ABOUT US"
       infoMessage="Langphy blends technology, consistency, and real-life language usage to create a learning experience that actually sticks — whether you're starting from A1 or aiming for fluency."
     >
-      Built for Learners,<br className="hidden sm:block" /> Driven by Passion
+      Built for Learners,<br className="lg:hidden sm:block" /> Driven by Passion
     </HeroBanner>
 
     {/* ── About Langphy & Our Mission ──────────────────────────────────── */}
