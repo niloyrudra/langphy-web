@@ -31,7 +31,7 @@ const DownloadAppSection = () => {
 
                 {/* Copy */}
                 <div className="flex flex-col gap-3 items-center text-center md:items-start md:text-left z-10 pb-12">
-                    <SectionTitle className="text-[#1B7CF5] text-left">
+                    <SectionTitle className="text-[#1B7CF5] lg:text-left">
                         Start Learning German Today
                     </SectionTitle>
                     <Paragraph

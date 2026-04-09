@@ -25,7 +25,7 @@ const SolutionsSection = () => {
                         width={500}
                         height={576}
                         loading="lazy"
-                        // className="w-[260px] sm:w-[340px] md:w-[400px] lg:w-[460px] h-auto"
+                        className="w-[260px] sm:w-[340px] md:w-[400px] lg:w-[460px] h-auto"
                     />
                 </div>
         
@@ -34,7 +34,7 @@ const SolutionsSection = () => {
                     
                     <InfoTag info="The Solutions" />
 
-                    <SectionTitle className="lg:text-left">A Structured Way to Learn German"</SectionTitle>
+                    <SectionTitle className="lg:text-left">A Structured Way to Learn German</SectionTitle>
 
                     <Paragraph
                         className='text-justify'
