@@ -14,7 +14,7 @@ const ProblemSection = () => {
                     <InfoTag info="The Problem" />
 
                     <SectionTitle className="lg:text-left">
-                        Learning German Shouldn't<br className="lg:hidden sm:block" /> FeelOverwhelming.
+                        Learning German Shouldn't<br className="lg:hidden sm:block" /> Feel Overwhelming.
                     </SectionTitle>
                     
                     <Paragraph
@@ -43,4 +43,4 @@ const ProblemSection = () => {
     );
 }
 
-export default ProblemSection
+export default ProblemSection;
