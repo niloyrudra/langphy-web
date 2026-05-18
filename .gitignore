@@ -39,3 +39,9 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+app-ads.txt
+
+.gitignore # local env files
+.env.local
+.env.development.local
