@@ -13,8 +13,10 @@ const DownloadSection = () => {
                 />
 
                 <Link
-                    href="/#download"
+                    href="https://play.google.com/store/apps/details?id=com.langphy.app&pcampaignid=web_share"
                     className="inline-flex items-center"
+                    target="_blank"
+                    rel="noopener noreferrer"
                 >
                     <Image
                         src="/svg/download-button.svg"

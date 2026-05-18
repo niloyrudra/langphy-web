@@ -3,6 +3,7 @@ import Image from 'next/image';
 import ActionButton from '../../ActionButton';
 import SectionTitle from '../../SectionTitle';
 import Paragraph from '../../Paragraph';
+import Link from 'next/link';
 
 const DownloadAppSection = () => {
     return (
@@ -39,7 +40,21 @@ const DownloadAppSection = () => {
                         content="Langphy is now available. Take the first step toward learning German with clarity and confidence."
                     />
 
-                    <ActionButton title="Download on Google Playstore" href="#download" className='mt-4' />
+                    {/* <ActionButton
+                        title="Download on Google Playstore" href="#download" className='mt-4'
+                        // eslint-disable-next-line react/jsx-no-duplicate-props
+                        href={new URL("https://play.google.com/store/apps/details?id=com.langphy.app&pcampaignid=web_share")}
+                        // target="_blank"
+                        // rel="noopener noreferrer"
+                    /> */}
+                    <Link
+                        href="https://play.google.com/store/apps/details?id=com.langphy.app&pcampaignid=web_share"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="font-poppins inline-flex items-center rounded-full bg-[#142C57] px-6 py-3 text-white font-medium text-sm transition-colors hover:bg-[#000000] mt-4"
+                    >
+                        Download on Google Playstore
+                    </Link>
                 
                 </div>
 

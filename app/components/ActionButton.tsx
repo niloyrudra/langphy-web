@@ -4,7 +4,7 @@ import Link from "next/link";
 
 const ActionButton = ({title, href, onClick, className}: {
     title: string,
-    href: string,
+    href: string | URL,
     onClick?: () => void,
     className?: string
 }) => (

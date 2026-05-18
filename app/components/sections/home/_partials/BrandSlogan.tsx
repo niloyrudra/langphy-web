@@ -12,7 +12,10 @@ const BrandSlogan = () =>  (
             className="text-sm lg:text-base sm:text-sm"
             content="Langphy is a mobile-first German language learning app designed to help you understand, practice, and confidently use German in real life."
         />
-        <CtaButton title="Download on Google Playstore" href="/#download" />
+        <CtaButton
+            title="Download on Google Play Store"
+            href="https://play.google.com/store/apps/details?id=com.langphy.app&pcampaignid=web_share"
+        />
     </div>
 );
 

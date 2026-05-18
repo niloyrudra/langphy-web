@@ -8,6 +8,7 @@ import MenuButton from "./nav/MenuButton";
 // import { useRouter } from "next/router";
 import { usePathname } from "next/navigation";
 import LogoDark from "./logo/LogoDark";
+import Link from "next/link";
 
 const Header = () => {
     // const pathName = usePathname()
@@ -28,7 +29,15 @@ const Header = () => {
                 <DesktopNavList />
 
                 {/* Desktop CTA */}
-                <ActionButton title="Download The App Now" href="/#download" className="hidden md:flex" />
+                <Link
+                    href="https://play.google.com/store/apps/details?id=com.langphy.app&pcampaignid=web_share"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="font-poppins inline-flex items-center rounded-full bg-[#142C57] px-6 py-3 text-white font-medium text-sm transition-colors hover:bg-[#000000] mt-4"
+                >
+                    Download The App Now
+                </Link>
+
 
                 {/* Mobile Hamburger */}
                 <MenuButton isMenuOpen={menuOpen} onClick={menuToggleHandler} />

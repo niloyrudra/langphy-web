@@ -1,11 +1,14 @@
 import Image from 'next/image';
 import FooterWidgetHeader from './_partials/FooterWidgetHeader';
+import Link from 'next/link';
 
 const FooterDownloadWidget = () => (
     <div>
         <FooterWidgetHeader title="Download App" />
-        <a
-            href="#"
+        <Link
+            href="https://play.google.com/store/apps/details?id=com.langphy.app&pcampaignid=web_share"
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-flex items-center"
         >
             <Image
@@ -14,7 +17,7 @@ const FooterDownloadWidget = () => (
                 width={130.67}
                 height={38.44}
             />
-        </a>
+        </Link>
     </div>
 );
 

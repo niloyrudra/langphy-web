@@ -14,7 +14,7 @@ const ProblemSection = () => {
                     <InfoTag info="The Problem" />
 
                     <SectionTitle className="lg:text-left">
-                        Learning German Shouldn't<br className="lg:hidden sm:block" /> Feel Overwhelming.
+                        Learning German Shouldn&apos;t<br className="lg:hidden sm:block" /> Feel Overwhelming.
                     </SectionTitle>
                     
                     <Paragraph

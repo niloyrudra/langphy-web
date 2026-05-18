@@ -19,6 +19,8 @@ const CtaButton = ({
                 className
             )
         )}
+        target="_blank"
+        rel="noopener noreferrer"
     >
         {title}
     </Link>
